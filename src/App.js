@@ -1,13 +1,23 @@
 import "./styles.css";
-import react from "react";
+import React from 'react';
 import { useState } from "react/cjs/react.production.min";
-export default function App() {
  
+const App=()=> {
+  const state=useState();
+  const [count,setCount]=useState(0);
 
+  //console.log(state);
+  
+    const IncNum=()=>{
+      setCount(count+1);
+     
+    };
   return (
     <>
-      <h1>{count}</h1>
-      <button onClick={IncNum}>Click Me</button>
+         <h1>{count}</h1>
+         <button onClick={IncNum}>Click me</button>
     </>
   );
 }
+
+export default App;
